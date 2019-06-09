@@ -1,0 +1,78 @@
+{% extends 'base.html' %} {% block content %}
+<div class="BoardContainer d-flex flex-column justify-content-center align-items-center">
+    <div class="TitleWrapper d-flex mt-4 ml-3 p-0">
+        <div class="TitleBar"></div>
+        <h2 class="TitleText p-0 m-0">자유 게시판</h2>
+    </div>
+
+    <div class="BoardHeader d-flex position-relative">
+        <div class="BoardHeader__number position-absolute text-center">No.</div>
+        <div class="BoardHeader__title position-absolute text-center">제목</div>
+        <div class="BoardHeader__writer position-absolute text-center">작성자</div>
+        <div class="BoardHeader__date position-absolute text-center">작성일</div>
+        <div class="BoardHeader__hit position-absolute text-center">조회수</div>
+        <div class="BoardHeader__like position-absolute text-center">공감</div>
+    </div>
+
+    <div class="BoardBody p-0">
+        {% for blog in blogs %}
+        <div class="BoardContent">
+            <span class="BoardContent__id BoardContent__inner">{{ blog.id }}</span>
+            <div class="BoardContent__title BoardContent__inner">
+                <div class="BoardContent__title__brackets">중요</div>
+                <div class="board--break-line"></div>
+                <a class="BoardContent__title__link" href="{% url 'free_detail' blog.id %}">{{blog.title}}</a>
+                <span class="BoardContent__comment--pc">[0]</span>
+            </div>
+
+            <div class="BoardContent__info">
+                <div>
+                    <div class="BoardContent__info__user BoardContent__inner">
+                        <a href="/profile/629">{{ blog.create_by }} </a>
+                    </div>
+
+                    <div class="BoardContent__info__date BoardContent__inner">19.05.12</div>
+                </div>
+
+                <div>
+                    <span class="BoardContent__info__hit BoardContent__inner">
+                        <img class="BoardContent__icon" src="https://cdn-class.likelion.org/static/img/icon_eye.png" />
+                        75
+                    </span>
+                    <span class="BoardContent__info__comment BoardContent__inner">
+                        <img class="BoardContent__icon" src="https://cdn-class.likelion.org/static/img/icon_talk.png" />
+                        3
+                    </span>
+                    <span class="BoardContent__info__like BoardContent__inner">
+                        <img class="BoardContent__icon"
+                            src="https://cdn-class.likelion.org/static/img/icon_heart.png" />
+                        9
+                    </span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <form action="" method="GET" class="Board__searchform">
+        <input type="text" class="Board__searchform__input" name="q" value="" />
+        <button type="submit" class="Board__searchform__submit">검색</button>
+    </form>
+
+    <div class="Pagenate">
+        <nav aria-label="Page navigation example">
+            <ul class="Pagenate__ul">
+                {%if posts.has_previous%}
+                <li class="Pagenate__ul__li">
+                    <a class="Pagenate__ul__li__link" href="?page=1"><span>
+                            <</span> </a> </li> <li class="Pagenate__ul__li--current" class="Pagenate__ul__li">
+                                <a class="Pagenate__ul__li__link" href="?page={{ posts.previous_page_number }}">1</a>
+                </li>
+                {%endif%}
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <link rel="apple-touch-icon" sizes="57x57"
+        href="https://cdn-class.likelion.org/static/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"
+        href="https://cdn-class.likelion.org/static/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"
+        href="https://cdn-class.likelion.org/static/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"
+        href="https://cdn-class.likelion.org/static/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+        href="https://cdn-class.likelion.org/static/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+        href="https://cdn-class.likelion.org/static/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"
+        href="https://cdn-class.likelion.org/static/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+        href="https://cdn-class.likelion.org/static/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://cdn-class.likelion.org/static/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+        href="https://cdn-class.likelion.org/static/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://cdn-class.likelion.org/static/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"
+        href="https://cdn-class.likelion.org/static/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://cdn-class.likelion.org/static/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://cdn-class.likelion.org/static/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage"
+        content="https://cdn-class.likelion.org/static/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+    <link href="https://cdn-class.likelion.org/static/custom.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn-class.likelion.org/static/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet"
+        type="text/css" />
+    <link href="https://cdn-class.likelion.org/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="https://cdn-class.likelion.org/static/assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet"
+        type="text/css" />
+    <link href="https://cdn-class.likelion.org/static/assets/plugins/jquery-scrollbar/jquery.scrollbar.css"
+        rel="stylesheet" type="text/css" media="screen" />
+    <link href="https://cdn-class.likelion.org/static/pages/css/pages-icons.css" rel="stylesheet" type="text/css">
+    <link class="main-stylesheet" href="https://cdn-class.likelion.org/static/pages/css/themes/unlax.css"
+        rel="stylesheet" type="text/css" />
+
+    <link class="main-stylesheet" href="https://cdn-class.likelion.org/static/css/classlion.css" rel="stylesheet"
+        type="text/css" />
+    <link class="main-stylesheet" href="https://cdn-class.likelion.org/static/css/lecture_list.css" rel="stylesheet"
+        type="text/css" />
+    <link class="main-stylesheet" href="https://cdn-class.likelion.org/static/css/lecture_index.css" rel="stylesheet"
+        type="text/css" />
+    <link class="main-stylesheet" href="https://cdn-class.likelion.org/static/css/lecture_show.css" rel="stylesheet"
+        type="text/css" />
+    <link class="main-stylesheet" href="https://cdn-class.likelion.org/static/css/lecture_main.css" rel="stylesheet"
+        type="text/css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+    <title>
+
+        클래스 라이언
+    </title>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            // fix for windows 8
+            if (navigator.appVersion.indexOf("Windows NT 6.2") != -1)
+                document.head.innerHTML +=
+                '<link rel="stylesheet" type="text/css" href="https://cdn-class.likelion.org/static/pages/css/windows.chrome.fix.css" />'
+        }
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-N6X4VHK');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+</head>
+
+<body class="fixed-header">
+
+
+
+    <div class="login-wrapper ">
+        <!-- START Login Background Pic Wrapper-->
+        <div class="bg-pic">
+            <!-- START Background Pic-->
+            <img src="https://cdn-class.likelion.org/static/img/%20bg-3.jpg"
+                data-src="https://cdn-class.likelion.org/static/img/bg-3.jpg"
+                data-src-retina="https://cdn-class.likelion.org/static/img/bg-3.jpg" alt="" class="lazy">
+            <!-- END Background Pic-->
+            <!-- START Background Caption-->
+            <div class="bg-caption pull-bottom sm-pull-bottom text-white p-l-20 m-b-20">
+                <h1 class="bold text-white p-l-20"></h1>
+            </div>
+            <!-- END Background Caption-->
+        </div>
+        <!-- END Login Background Pic Wrapper-->
+        <!-- START Login Right Container-->
+        <div class="login-container bg-white">
+            <div class="login__wrap__box">
+                <a href="/">
+                    <img alt="logo" data-src="https://cdn-class.likelion.org/static/img/class_lion_logo.png"
+                        data-src-retina="https://cdn-class.likelion.org/static/img/class_lion_logo.png" height="22"
+                        src="https://cdn-class.likelion.org/static/img/class_lion_logo.png" width="175"></a>
+                <!-- START Login Form -->
+                <form id="form-login" class="p-t-15" role="form" method="POST" action="/accounts/login/?next=/board/notices/">
+                    {% csrf_token %}
+                    <!-- START Form Control-->
+                    <div class="form-group form-group-default">
+                        <label for="id_username">아이디</label>
+                        <div class="controls">
+                            <input id="id_username" name="username" placeholder="" class="form-control"
+                                required autofocus>
+                        </div>
+                    </div>
+                    <!-- END Form Control-->
+                    <!-- START Form Control-->
+                    <div class="form-group form-group-default">
+                        <label for="id_password">비밀번호</label>
+                        <div class="controls">
+                            <input type="password" class="form-control" id="id_password" name="password" placeholder=""
+                                required>
+                        </div>
+                    </div>
+                    <!-- START Form Control-->
+                    <div class="row">
+
+
+
+
+
+
+
+                    </div>
+                    <!-- END Form Control-->
+
+                    <button class="btn btn-primary btn-cons m-t-10" type="submit">시작</button>
+                    <a class="btn btn-primary btn-cons m-t-10" href="/accounts/password_reset/">
+                        비밀번호 찾기
+                    </a>
+
+
+                </form>
+                <!--END Login Form-->
+            </div>
+        </div>
+        <!-- END Login Right Container-->
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn-class.likelion.org/static/assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+    <script src="https://cdn-class.likelion.org/static/assets/plugins/jquery/jquery-3.2.1.min.js"
+        type="text/javascript"></script>
+    <script src="https://cdn-class.likelion.org/static/assets/plugins/modernizr.custom.js" type="text/javascript">
+    </script>
+    <script src="https://cdn-class.likelion.org/static/assets/plugins/jquery-ui/jquery-ui.min.js"
+        type="text/javascript"></script>
+    <script src="https://cdn-class.likelion.org/static/assets/plugins/popper/umd/popper.min.js" type="text/javascript">
+    </script>
+    <script src="https://cdn-class.likelion.org/static/assets/plugins/bootstrap/js/bootstrap.min.js"
+        type="text/javascript"></script>
+    <script src="https://cdn-class.likelion.org/static/assets/plugins/jquery/jquery-easy.js" type="text/javascript">
+    </script>
+    <script src="https://cdn-class.likelion.org/static/assets/plugins/jquery-unveil/jquery.unveil.min.js"
+        type="text/javascript"></script>
+    <script src="https://cdn-class.likelion.org/static/assets/plugins/jquery-ios-list/jquery.ioslist.min.js"
+        type="text/javascript"></script>
+    <script src="https://cdn-class.likelion.org/static/assets/plugins/jquery-actual/jquery.actual.min.js"></script>
+    <script src="https://cdn-class.likelion.org/static/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js">
+    </script>
+    <script src="https://cdn-class.likelion.org/static/pages/js/pages.min.js" type="text/javascript"></script>
+
+
+    <script src="https://cdn-class.likelion.org/static/full-screen.js" type="text/javascript"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+    <script>
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = jQuery.trim(cookies[i]);
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        // Setup AJAX
+        $(function () {
+            $.ajaxSetup({
+                headers: {
+                    "X-CSRFToken": getCookie("csrftoken")
+                }
+            });
+        });
+
+        function like() {
+            var like = $(this);
+            var type = like.data('type');
+            var pk = like.data('id');
+            var action = like.data('action');
+            var route = like.data('route');
+            var dislike = like.next();
+            var like_count = like.find("[data-count='like-count']").text();
+            var emptyHt = "https://cdn-class.likelion.org/static/img/icon_heart_line.png";
+            var fullHt = "https://cdn-class.likelion.org/static/img/icon_heart.png"
+
+            if (route) {
+                url = route
+            } else {
+                url = pk + "/" + action + "/"
+            }
+
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: {
+                    'obj': pk
+                },
+
+                success: function (json) {
+                    like.find("[data-count='like-count']").text(json.like_count);
+                    if (like_count < json.like_count) {
+                        like.find(".comment-button__likeit__icon--empty").attr('src', fullHt);
+                        like.find(".content-button__likeit__icon--empty").attr('src', fullHt);
+                        like.find(".comment-button__likeit__icon--empty").addClass(
+                            'comment-button__likeit__icon--full');
+                        like.find(".comment-button__likeit__icon--empty").removeClass(
+                            'comment-button__likeit__icon--empty');
+                        like.find(".content-button__likeit__icon--empty").addClass(
+                            'content-button__likeit__icon--full');
+                        like.find(".content-button__likeit__icon--empty").removeClass(
+                            'content-button__likeit__icon--empty');
+                    } else {
+                        like.find(".comment-button__likeit__icon--full").attr('src', emptyHt);
+                        like.find(".content-button__likeit__icon--full").attr('src', emptyHt);
+                        like.find(".comment-button__likeit__icon--full").addClass(
+                            'comment-button__likeit__icon--empty');
+                        like.find(".comment-button__likeit__icon--full").removeClass(
+                            'comment-button__likeit__icon--full');
+                        like.find(".content-button__likeit__icon--full").addClass(
+                            'content-button__likeit__icon--empty');
+                        like.find(".content-button__likeit__icon--full").removeClass(
+                            'content-button__likeit__icon--full');
+                    }
+                }
+            });
+            return false;
+        }
+
+        $('.comment__recomment').click(function () {
+            $(this).parent().parent().siblings('.RecommentContainer').toggleClass('RecommentContainer--hide');
+        })
+
+        // Connecting Handlers
+        $('[data-action="like"]').click(like);
+
+        $('.lecture-category-list').slick({
+            infinite: false,
+            speed: 300,
+            prevArrow: $('.prev--necessary'),
+            nextArrow: $('.next--necessary'),
+            slidesToShow: 3,
+            slidesToScroll: 3
+        });
+
+        $('.lecture-category-list2').slick({
+            infinite: false,
+            speed: 300,
+            prevArrow: $('.prev'),
+            nextArrow: $('.next'),
+            slidesToShow: 3,
+            slidesToScroll: 3
+        });
+
+        $(document).ready(function () {
+            var levels = $('.lecture-category-card-level');
+            var progress = $('.lecture-category-card-progress-div');
+            var dynamic_bar = 0;
+
+            //레벨에 따라 다른 이미지 출력하기
+            for (var i = 0; i < levels.length; i++) {
+                console.log($(progress[i]).data('progress'));
+                switch ($(levels[i]).data('level')) {
+                    case 1:
+                        $(levels[i]).attr('src', "https://cdn-class.likelion.org/static/img/fire_icon_1.svg");
+                        break;
+                    case 2:
+                        $(levels[i]).attr('src', "https://cdn-class.likelion.org/static/img/fire_icon_2.svg");
+                        break;
+                    case 3:
+                        $(levels[i]).attr('src', "https://cdn-class.likelion.org/static/img/fire_icon_3.svg");
+                        break;
+                    case 4:
+                        $(levels[i]).attr('src', "https://cdn-class.likelion.org/static/img/fire_icon_4.svg");
+                        break;
+                    case 5:
+                        $(levels[i]).attr('src', "https://cdn-class.likelion.org/static/img/fire_icon_5.svg");
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            //수강률에 따라 바 길이 다르게 출력하기
+            for (var i = 0; i < progress.length; i++) {
+                $(progress[i]).children().animate({
+                    width: $(progress[i]).data('progress') + '%'
+                }, 1000);
+            }
+
+            //마우스오버시 cover 이미지 출력
+            $('.lecture-category-card').hover(function () {
+                $(this).find('.lecture-category-card--hover').removeClass('d-none');
+            }, function () {
+                $(this).find('.lecture-category-card--hover').addClass('d-none');
+            })
+
+            //강의 4개 이하일 시 이전,다음버튼 출력하지 않음
+            var cardLenNecessary = $('.lecture-category-list').find('.lecture-category-card').length;
+            var cardLen = $('.lecture-category-list2').find('.lecture-category-card').length;
+
+            if (cardLenNecessary < 5) {
+                $('.prev--necessary').addClass('invisible');
+                $('.next--necessary').addClass('invisible');
+            }
+
+            if (cardLen < 5) {
+                $('.prev').addClass('invisible');
+                $('.next').addClass('invisible');
+            }
+
+            //stacklion 댓글 토글
+            $('.BoardDetail__comment__header').click(function () {
+                $('.BoardDetail__comment__wrapper').toggleClass('d-none');
+                if ($('.BoardDetail__comment__wrapper').hasClass('d-none')) {
+                    $('.Comment__toggle').text('▼');
+                } else {
+                    $('.Comment__toggle').text('▲');
+                }
+            });
+
+
+        });
+    </script>
+
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6X4VHK" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>

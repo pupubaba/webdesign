@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="page-content-wrapper PageContainer">
+    <div class="PageContainer-child">
+
+
+
+
+        <div class="BoardDetail">
+            <div class="BoardDetailContainer">
+                <div class="BoardDetail__profile">
+                    <img class="BoardDetail__profile__img" src="https://cdn-class.likelion.org/static/img/person.png">
+                    <div class="BoardDetail__profile__info">
+                        <a href="/profile/851" style="color: #000000 !important; opacity: 1;">{{blog.create_by}}</a>
+                        <p class="profile__info__create">{{blog.create_at}}</p>
+                    </div>
+                    <div class="BoardDetail__profile__button--onlyuser">
+
+
+                    </div>
+                    <p class="BoardDetail__profile__hit">조회 수: <span class="bold">2</span>회</p>
+                </div>
+                <span class="BoardDetail__category">&gt; 자유게시판</span>
+                <div class="BoardDetail__content">
+                    <h2 class="BoardDetail__content__title">{{blog.title}}</h2>
+                    <div class="BoardDetail__content__maintext">
+                        {{blog.text}}
+                    </div>
+                    <div class="BoardDetail__content__button">
+
+
+                        <div data-id="318" data-route="" data-action="like" title="Like">
+                            <button class="content-button__likeit" data-count="like">
+
+                                <img class="content-button__likeit__icon--empty"
+                                    src="https://cdn-class.likelion.org/static/img/icon_heart_line.png">
+
+                                <span data-count="like-count" class="content-button__likeit-text">0</span>
+                            </button>
+                            <!-- 스크랩버튼
+    <button class="writer-profile__scrap" disabled>스크랩</button>
+    -->
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="card card-default BoardDetail__comment">
+                    <div class="card-header BoardDetail__comment__header">
+                        댓글 <span class="BoardDetail__commentCount">0</span> 개
+                    </div>
+
+
+
+
+                    <div class="card-body p-b-0 BoardDetail__comment__body">
+
+                    </div>
+
+
+
+
+
+                    <div class="Comment-form__container">
+                        <form method="post" class="form-horizontal" action="/comment/new" enctype="multipart/form-data">
+
+                            <input type="hidden" name="csrfmiddlewaretoken"
+                                value="GLn82e4qKKDv5Zud9tFMl0CRSG2svjwTf3cZha9BhNTez3LQIdRBsrYJm1k5Csjd">
+
+
+
+
+
+                            <p style="display:none;"></p>
+
+
+
+
+
+
+                            <p></p>
+
+                            <div class="row Comment-form">
+                                <textarea class="form-control" id="" name="content" rows="4"
+                                    placeholder="댓글을 입력하세요"></textarea>
+                                <div class="col-12 pl-0 Comment-form__button__wrapper">
+                                    <label
+                                        class="btn btn-primary ml-2 Comment-form__button Comment-form__button__picture"
+                                        for="id_image">
+                                        <img class="comment-button__img"
+                                            src="https://cdn-class.likelion.org/static/img/media.png">
+                                    </label>
+                                    <input type="file" id="id_image" name="image" style="display: none;">
+                                    <button
+                                        class="btn btn-primary ml-2 Comment-form__button Comment-form__button__submit"
+                                        type="submit">
+                                        <img class="comment-button__img"
+                                            src="https://cdn-class.likelion.org/static/img/send.png">
+                                    </button>
+                                </div>
+                                <p id="file-upload-filename"></p>
+                            </div>
+
+
+
+
+                            <div><input type="hidden" name="content_type" value="board.board" id="id_content_type">
+                            </div>
+
+
+
+                            <div><input type="hidden" name="object_id" value="318" id="id_object_id"></div>
+
+
+
+                            <div><input type="hidden" name="timestamp" value="1560078261" id="id_timestamp"></div>
+
+
+
+                            <div><input type="hidden" name="security_hash"
+                                    value="d334c53b3bdbc7062c33283a5ffea7ea8f2b049a" id="id_security_hash"></div>
+
+
+
+
+
+                            <p></p>
+
+
+
+                        </form>
+
+                    </div>
+                    <script type="text/javascript">
+                        var input = document.getElementById('id_image');
+                        var infoArea = document.getElementById('file-upload-filename');
+                        input.addEventListener('change', showFileName);
+
+                        function showFileName(event) {
+                            // the change event gives us the input it occurred in
+                            var input = event.srcElement;
+                            // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
+                            var fileName = input.files[0].name;
+                            // use fileName however fits your app best, i.e. add it into a div
+                            infoArea.textContent = "Filename: " + fileName;
+                        }
+                    </script>
+
+
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}
