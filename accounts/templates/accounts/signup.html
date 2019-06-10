@@ -141,14 +141,15 @@
                         data-src-retina="https://cdn-class.likelion.org/static/img/class_lion_logo.png" height="22"
                         src="https://cdn-class.likelion.org/static/img/class_lion_logo.png" width="175"></a>
                 <!-- START Login Form -->
-                <form id="form-login" class="p-t-15" role="form" method="POST" action="/accounts/login/?next=/board/notices/">
+                <form id="form-login" class="p-t-15" role="form" method="POST"
+                    action="/accounts/signup/?next=/board/notices/">
                     {% csrf_token %}
                     <!-- START Form Control-->
                     <div class="form-group form-group-default">
                         <label for="id_username">아이디</label>
                         <div class="controls">
-                            <input id="id_username" name="username" placeholder="" class="form-control"
-                                required autofocus>
+                            <input id="id_username" name="username" placeholder="" class="form-control" required
+                                autofocus>
                         </div>
                     </div>
                     <!-- END Form Control-->
@@ -156,7 +157,14 @@
                     <div class="form-group form-group-default">
                         <label for="id_password">비밀번호</label>
                         <div class="controls">
-                            <input type="password" class="form-control" id="id_password" name="password" placeholder=""
+                            <input type="password" class="form-control" id="id_password" name="password1" placeholder=""
+                                required>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-default">
+                        <label for="id_password">비밀번호 재입력</label>
+                        <div class="controls">
+                            <input type="password" class="form-control" id="id_password" name="password2" placeholder=""
                                 required>
                         </div>
                     </div>
@@ -173,9 +181,9 @@
                     <!-- END Form Control-->
 
                     <button class="btn btn-primary btn-cons m-t-10" type="submit">시작</button>
-                    <a class="btn btn-primary btn-cons m-t-10" href="/accounts/singup/">
-                        회원가입
-                    </a>
+                    {% comment %} <a class="btn btn-primary btn-cons m-t-10" href="/accounts/password_reset/">
+                        비밀번호 찾기
+                    </a> {% endcomment %}
 
 
                 </form>

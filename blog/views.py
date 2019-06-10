@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+#from django.contrib.auth.models import User
 from .models import Notice,Free,Tip
 from .forms import NoticeForm,FreeForm,TipForm
 # Create your views here.
@@ -111,8 +112,11 @@ def tip_home(request):
     # return render(request, 'blog/notices.html', {'blogs': blogs})
 
 def tip_detail(request, pk):
-    blog = get_object_or_404(Tip, pk=pk)
-    return render(request, 'blog/detail.html', {'blog': blog})
+    if not request.user.is_authenticated:
+        return redirect('login')
+    else:
+        blog = get_object_or_404(Tip, pk=pk)
+        return render(request, 'blog/detail.html', {'blog': blog})
 
 def tip_create(request):
     form = TipForm(request.POST or None)
